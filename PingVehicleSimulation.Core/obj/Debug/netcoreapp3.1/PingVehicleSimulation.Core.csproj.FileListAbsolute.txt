@@ -6,3 +6,6 @@ C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Co
 C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\obj\Debug\netcoreapp3.1\PingVehicleSimulation.Core.csproj.CoreCompileInputs.cache
 C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\obj\Debug\netcoreapp3.1\PingVehicleSimulation.Core.dll
 C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\obj\Debug\netcoreapp3.1\PingVehicleSimulation.Core.pdb
+C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\bin\Debug\netcoreapp3.1\PingVehicleSimulation.Core.runtimeconfig.json
+C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\bin\Debug\netcoreapp3.1\PingVehicleSimulation.Core.runtimeconfig.dev.json
+C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.Core\obj\Debug\netcoreapp3.1\PingVehicleSimulation.Core.genruntimeconfig.cache

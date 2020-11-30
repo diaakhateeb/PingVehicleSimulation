@@ -4,14 +4,14 @@
     "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj": {
+    "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\PingVehicleSimulation.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj",
-        "projectName": "PingVehicleSimulation.Web",
-        "projectPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj",
+        "projectUniqueName": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\PingVehicleSimulation.Core.csproj",
+        "projectName": "PingVehicleSimulation.Core",
+        "projectPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\PingVehicleSimulation.Core.csproj",
         "packagesPath": "C:\\Users\\diaakhateeb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\obj\\",
+        "outputPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\diaakhateeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,82 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj",
+        "projectName": "PingVehicleSimulation.Web",
+        "projectPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj",
+        "packagesPath": "C:\\Users\\diaakhateeb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\diaakhateeb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\PingVehicleSimulation.Core.csproj": {
+                "projectPath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Core\\PingVehicleSimulation.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.10.9, )"
