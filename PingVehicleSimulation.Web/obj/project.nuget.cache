@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aqltVvy06bHnrP/6wSaNOfeGKhV+p848Tp4JU1vclh/nibRA0rpXnh1H2wX0bLqmjg5jS68Sy85TI9maAuKHJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\diaakhateeb\\source\\repos\\PingVehicleSimulation\\PingVehicleSimulation.Web\\PingVehicleSimulation.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\diaakhateeb\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
