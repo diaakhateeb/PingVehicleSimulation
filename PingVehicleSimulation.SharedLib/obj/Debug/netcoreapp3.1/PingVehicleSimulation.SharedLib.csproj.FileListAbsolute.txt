@@ -1,8 +1,0 @@
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\bin\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.deps.json
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\bin\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.dll
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\bin\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.pdb
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\obj\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.AssemblyInfoInputs.cache
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\obj\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.AssemblyInfo.cs
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\obj\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.csproj.CoreCompileInputs.cache
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\obj\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.dll
-C:\Users\diaakhateeb\source\repos\PingVehicleSimulation\PingVehicleSimulation.SharedLib\obj\Debug\netcoreapp3.1\PingVehicleSimulation.SharedLib.pdb
