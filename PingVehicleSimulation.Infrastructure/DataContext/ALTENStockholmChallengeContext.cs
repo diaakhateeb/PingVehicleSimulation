@@ -1,11 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 using PingVehicleSimulation.Core.Entities;
 
 #nullable disable
 
-namespace PingVehicleSimulation.Core
+namespace PingVehicleSimulation.Infrastructure.DataContext
 {
     public partial class ALTENStockholmChallengeContext : DbContext
     {

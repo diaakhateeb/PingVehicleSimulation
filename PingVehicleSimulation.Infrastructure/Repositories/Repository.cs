@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PingVehicleSimulation.Core;
 using PingVehicleSimulation.Core.Interfaces;
+using PingVehicleSimulation.Infrastructure.DataContext;
 
 namespace PingVehicleSimulation.Infrastructure.Repositories
 {
