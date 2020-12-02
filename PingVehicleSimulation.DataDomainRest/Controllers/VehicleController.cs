@@ -1,27 +1,23 @@
-﻿using System.IO.Enumeration;
-using System.Net;
+﻿using System.Net;
 using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using PingVehicleSimulation.Core.Entities;
 using PingVehicleSimulation.Core.Interfaces;
 
-namespace PingVehicleSimulation.Api.Controllers.RestApi
+namespace PingVehicleSimulation.DataDomainRest.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class VehicleController : ControllerBase
     {
-        private readonly IMapper _mapper;
         private readonly IRepository<Vehicle> _repo;
-        public VehicleController(IMapper mapper, IRepository<Vehicle> repo)
+        public VehicleController(IRepository<Vehicle> repo)
         {
-            _mapper = mapper;
             _repo = repo;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IActionResult> Get()
         {
             var vehicles = await _repo.ListAsync();
 
@@ -29,7 +25,8 @@ namespace PingVehicleSimulation.Api.Controllers.RestApi
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetVehicle(int id)
+        [Route("api/controller/{id}")]
+        public async Task<IActionResult> GetVehicleById(int id)
         {
             var vehicle = await _repo.FindByPredicateAsync(v => v.Id == id);
 

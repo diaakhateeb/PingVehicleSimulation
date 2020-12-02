@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:1759",
+      "applicationUrl": "http://localhost:13967",
       "sslPort": 0
     }
   },
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "PingVehicleSimulation.Api": {
+    "PingVehicleSimulation.ApiGateway": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

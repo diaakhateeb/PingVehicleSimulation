@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PingVehicleSimulation.Core"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PingVehicleSimulation.Infrastructure", "PingVehicleSimulation.Infrastructure\PingVehicleSimulation.Infrastructure.csproj", "{E77C5BE9-03F1-4D93-945E-4F81C69DA182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingVehicleSimulation.Web", "PingVehicleSimulation.Web\PingVehicleSimulation.Web.csproj", "{0F2BA65E-B59B-4D7F-A3FA-8A98E1063560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PingVehicleSimulation.Web", "PingVehicleSimulation.Web\PingVehicleSimulation.Web.csproj", "{0F2BA65E-B59B-4D7F-A3FA-8A98E1063560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingVehicleSimulation.SharedLib", "PingVehicleSimulation.SharedLib\PingVehicleSimulation.SharedLib.csproj", "{F9BC372D-9875-4BAF-90BA-A61F5A8B9E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PingVehicleSimulation.SharedLib", "PingVehicleSimulation.SharedLib\PingVehicleSimulation.SharedLib.csproj", "{F9BC372D-9875-4BAF-90BA-A61F5A8B9E3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingVehicleSimulation.Api", "PingVehicleSimulation.Api\PingVehicleSimulation.Api.csproj", "{C71F1A84-933D-48E3-8734-D139B19FE972}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingVehicleSimulation.ApiGateway", "PingVehicleSimulation.ApiGateway\PingVehicleSimulation.ApiGateway.csproj", "{D5CA0C4D-478D-4CED-B41E-429C56F7B9F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PingVehicleSimulation.DataDomainRest", "PingVehicleSimulation.DataDomainRest\PingVehicleSimulation.DataDomainRest.csproj", "{AF20755A-A04F-4110-B300-2953583C0297}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +37,14 @@ Global
 		{F9BC372D-9875-4BAF-90BA-A61F5A8B9E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9BC372D-9875-4BAF-90BA-A61F5A8B9E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9BC372D-9875-4BAF-90BA-A61F5A8B9E3D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C71F1A84-933D-48E3-8734-D139B19FE972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C71F1A84-933D-48E3-8734-D139B19FE972}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C71F1A84-933D-48E3-8734-D139B19FE972}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C71F1A84-933D-48E3-8734-D139B19FE972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5CA0C4D-478D-4CED-B41E-429C56F7B9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5CA0C4D-478D-4CED-B41E-429C56F7B9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5CA0C4D-478D-4CED-B41E-429C56F7B9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5CA0C4D-478D-4CED-B41E-429C56F7B9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF20755A-A04F-4110-B300-2953583C0297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF20755A-A04F-4110-B300-2953583C0297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF20755A-A04F-4110-B300-2953583C0297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF20755A-A04F-4110-B300-2953583C0297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
