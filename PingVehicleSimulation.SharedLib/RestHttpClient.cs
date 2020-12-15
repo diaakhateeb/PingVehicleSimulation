@@ -13,18 +13,14 @@ namespace PingVehicleSimulation.SharedLib
     }
     public class RestHttpClient
     {
-        private static readonly HttpClient _httpClient;
-        static RestHttpClient()
-        {
-            _httpClient = new HttpClient
-            {
-                BaseAddress = new Uri("http://localhost:64195/")
-            };
+	    public static HttpClient GetHttpClientInstance(string uri)
+	    {
+		    var httpClient = new HttpClient { BaseAddress = new Uri(uri) };
 
-            _httpClient.DefaultRequestHeaders.Accept.Clear();
-            _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-        }
+		    httpClient.DefaultRequestHeaders.Accept.Clear();
+		    httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-        public static HttpClient GetHttpClientInstance => _httpClient;
+		    return httpClient;
+	    }
     }
 }

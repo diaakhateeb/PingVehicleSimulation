@@ -10,9 +10,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using PingVehicleSimulation.Core.Entities;
 using PingVehicleSimulation.Core.Interfaces;
 using PingVehicleSimulation.Infrastructure.DataContext;
 using PingVehicleSimulation.Infrastructure.Repositories;
+using PingVehicleSimulation.Infrastructure.UnitOfWork;
 
 namespace PingVehicleSimulation.DataDomainRest
 {
@@ -40,7 +44,22 @@ namespace PingVehicleSimulation.DataDomainRest
             services.AddSingleton(mapper);
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            services.AddScoped(typeof(ALTENStockholmChallengeContext));
+            services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+            services.AddScoped(typeof(DbContext), typeof(ALTENStockholmChallengeContext));
+
+            services.AddSwaggerGen(s =>
+            {
+	            s.SwaggerDoc("v1", new OpenApiInfo
+	            {
+                    Title = "Data domain API",
+                    Version = "v1",
+                    Description = "Receives API request from the API Gateway and push it to the queue."
+	            });
+            });
+            services.ConfigureSwaggerGen(s =>
+            {
+	            s.ResolveConflictingActions(x => x.FirstOrDefault());
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +69,13 @@ namespace PingVehicleSimulation.DataDomainRest
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+	            s.SwaggerEndpoint("swagger/v1/swagger.json", "PingVehicleSimulation Data Domain API V1");
+	            s.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 

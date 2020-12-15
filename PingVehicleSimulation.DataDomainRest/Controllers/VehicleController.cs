@@ -10,64 +10,70 @@ namespace PingVehicleSimulation.DataDomainRest.Controllers
     [ApiController]
     public class VehicleController : ControllerBase
     {
-        private readonly IRepository<Vehicle> _repo;
-        public VehicleController(IRepository<Vehicle> repo)
+        private readonly IUnitOfWork<Vehicle> _vehicleUnitOfWork;
+
+        public VehicleController(IUnitOfWork<Vehicle> vehicleUnitOfWork)
         {
-            _repo = repo;
+			_vehicleUnitOfWork = vehicleUnitOfWork;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            var vehicles = await _repo.ListAsync();
+            var vehicles = await _vehicleUnitOfWork.RepositoryObject.ListAsync();
 
             return Ok(vehicles);
         }
 
-        [HttpGet]
-        [Route("api/controller/{id}")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetVehicleById(int id)
         {
-            var vehicle = await _repo.FindByPredicateAsync(v => v.Id == id);
+            
+	        var vehicle = await _vehicleUnitOfWork.RepositoryObject.FindByIdAsync(id);
 
             return Ok(vehicle);
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         public async Task<IActionResult> AddVehicle(Vehicle vehicle)
         {
-            var newVehicle = await _repo.AddAsync(vehicle);
+            var newVehicle = await _vehicleUnitOfWork.RepositoryObject.AddAsync(vehicle);
+            await _vehicleUnitOfWork.SaveChangesToDbAsync();
 
             return Ok(newVehicle);
         }
 
-        [HttpPost]
+        [HttpPatch("[action]")]
         public async Task<IActionResult> UpdateVehicle(Vehicle vehicle)
         {
-            await _repo.UpdateAsync(vehicle);
+            await _vehicleUnitOfWork.RepositoryObject.UpdateAsync(vehicle);
+            await _vehicleUnitOfWork.SaveChangesToDbAsync();
 
-            return Ok();
+            return Ok(vehicle);
         }
 
-        [HttpDelete]
+        [HttpDelete("[action]")]
         public async Task<IActionResult> DeleteVehicle(Vehicle vehicle)
         {
-            await _repo.DeleteAsync(vehicle);
+            await _vehicleUnitOfWork.RepositoryObject.DeleteAsync(vehicle);
+			await _vehicleUnitOfWork.SaveChangesToDbAsync();
 
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVehicleById(int id)
         {
-            var vehicle = await _repo.FindByPredicateAsync(v => v.Id == id);
+            var vehicle = await _vehicleUnitOfWork.RepositoryObject.FindByIdAsync(id);
 
             if (vehicle == null)
             {
                 return StatusCode((int) HttpStatusCode.NotFound);
             }
             
-            await _repo.DeleteAsync(vehicle);
+            await _vehicleUnitOfWork.RepositoryObject.DeleteAsync(vehicle);
+			await _vehicleUnitOfWork.SaveChangesToDbAsync();
+
             return Ok();
 
         }

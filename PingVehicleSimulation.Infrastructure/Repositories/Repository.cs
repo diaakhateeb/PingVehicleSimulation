@@ -12,9 +12,9 @@ namespace PingVehicleSimulation.Infrastructure.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        private readonly ALTENStockholmChallengeContext _dbContext;
+        private readonly DbContext _dbContext;
 
-        public Repository(ALTENStockholmChallengeContext dbContext)
+        public Repository(DbContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -31,9 +31,9 @@ namespace PingVehicleSimulation.Infrastructure.Repositories
             return await _dbContext.Set<TEntity>().FindAsync(entity);
         }
 
-        public async Task<TEntity> FindByPredicateAsync(Predicate<TEntity> entity)
+        public async Task<TEntity> FindByIdAsync<T>(T id)
         {
-            return await _dbContext.Set<TEntity>().FindAsync(entity);
+	        return await _dbContext.Set<TEntity>().FindAsync(id);
         }
 
         public async Task<List<TEntity>> ListAsync()

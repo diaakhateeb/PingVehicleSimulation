@@ -12,7 +12,6 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/Vehicle",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +19,7 @@
     "PingVehicleSimulation.DataDomainRest": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Vehicle",
+      "launchUrl": "api/Vehicle/GetAll",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

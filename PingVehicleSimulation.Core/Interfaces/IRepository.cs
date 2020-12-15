@@ -9,7 +9,7 @@ namespace PingVehicleSimulation.Core.Interfaces
     {
         Task<TEntity> AddAsync(TEntity entity);
         Task<TEntity> FindAsync(TEntity entity);
-        Task<TEntity> FindByPredicateAsync(Predicate<TEntity> entity);
+        Task<TEntity> FindByIdAsync<T>(T id);
         Task<List<TEntity>> ListAsync();
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);
