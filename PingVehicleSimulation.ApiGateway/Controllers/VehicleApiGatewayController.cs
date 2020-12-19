@@ -27,7 +27,7 @@ namespace PingVehicleSimulation.ApiGateway.Controllers
 	        using var httpClient = RestHttpClient.GetHttpClientInstance(dataDomainRestBaseUri);
 
 	        var vehicles = await httpClient.GetStringAsync("api/Vehicle");
-	        var u;
+	        
 	        return Ok(vehicles);
         }
     }
