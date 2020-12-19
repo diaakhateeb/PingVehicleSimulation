@@ -2,8 +2,6 @@
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using PingVehicleSimulation.Core.Entities;
-using PingVehicleSimulation.Core.Interfaces;
 using PingVehicleSimulation.SharedLib;
 
 namespace PingVehicleSimulation.ApiGateway.Controllers
@@ -29,7 +27,7 @@ namespace PingVehicleSimulation.ApiGateway.Controllers
 	        using var httpClient = RestHttpClient.GetHttpClientInstance(dataDomainRestBaseUri);
 
 	        var vehicles = await httpClient.GetStringAsync("api/Vehicle");
-
+	        var u;
 	        return Ok(vehicles);
         }
     }
