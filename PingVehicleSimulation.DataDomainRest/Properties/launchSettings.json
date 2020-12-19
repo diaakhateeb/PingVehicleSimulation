@@ -20,16 +20,18 @@
     "PingVehicleSimulation.DataDomainRest": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/Vehicle/GetAll",
+      "launchUrl": "api/Vehicle",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:5001"
     },
     "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "publishAllPorts": true
+        "commandName": "Docker",
+        "applicationUrl": "http://localhost:6001",
+        "launchUrl": "api/Vehicle",
+        "launchBrowser": true,
+        "publishAllPorts": true
     }
   }
 }
